@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Valentine's Day, Airish!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky">
+    <div class="stars" id="starfield"></div>
+  </div>
+
+  <div class="container">
+    <!-- Common slides (1-8) -->
+    <!-- Slide 1 -->
+    <div class="slide common-slide" data-slide="1">
+      <div class="slide-content">
+        <h1>Happy Valentine's Day, Airish!!</h1>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide common-slide" data-slide="2">
+      <div class="slide-content">
+        <h1>Hehe, parang medyo bitin yung flowers<br/>na binigay ko kahapon…</h1>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide common-slide" data-slide="3">
+      <div class="slide-content">
+        <h1>So ito na lang yung maliit na follow-up</h1>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide common-slide" data-slide="4">
+      <div class="slide-content">
+        <h1>Wala lang, I just wanted to do something<br/>extra, hehehe</h1>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide common-slide" data-slide="5">
+      <div class="slide-content">
+        <h1>I hope this makes you smile,<br/>kahit saglit lang :P</h1>
+      </div>
+    </div>
+
+    <!-- Slide 6 - Closed Envelope (special handling) -->
+    <div class="slide common-slide" data-slide="6" id="closedEnvelopeSlide">
+      <div class="slide-content">
+        <div class="envelope-container" id="envelopeContainer">
+          <div class="envelope" id="envelope">
+            <div class="envelope-front">
+              <div class="envelope-flap"></div>
+              <div class="envelope-body">
+                <div class="envelope-text">💌</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="envelope-hint">Click to open</p>
+      </div>
+    </div>
+
+    <!-- Slide 7 - Open Letter with Poem (special handling) -->
+    <div class="slide common-slide" data-slide="7" id="openEnvelopeSlide" style="display: none;">
+      <div class="slide-content">
+        <div class="letter-frame">
+          <div class="letter-content">
+            <p><em>On Valentine's Day, the sun shines its rays on every face,</em></p>
+            <p><em>It's like the world itself has slowed its fast pace.</em></p>
+            <p><em>Laughter drifts gently through the open air,</em></p>
+            <p><em>And reminds us that joy still lives everywhere.</em></p>
+
+            <p><em>Love blooms not only in roses wrapped with thread,</em></p>
+            <p><em>But also in every word in this poem that I've said.</em></p>
+            <p><em>It shows in moments that do not flee,</em></p>
+            <p><em>In finding comfort in just being free.</em></p>
+
+            <p><em>Time passes by, like sparks across the sky,</em></p>
+            <p><em>Yet meaning remains, teaching hearts how to try.</em></p>
+            <p><em>For happiness grows when it's honestly shared,</em></p>
+            <p><em>In small acts of kindness that show someone cared.</em></p>
+
+            <p><em>So, would you want to go out with me this afternoon?</em></p>
+            <p><em>No rush, no pressure, just time arriving soon.</em></p>
+            <p><em>We could walk while the day goes away,</em></p>
+            <p><em>And let this afternoon slowly find its own way.</em></p>
+          </div>
+        </div>
+        <p class="letter-hint">Click to continue</p>
+      </div>
+    </div>
+
+    <!-- Slide 8 - Choice Buttons -->
+    <div class="slide common-slide" data-slide="8" id="choiceSlide">
+      <div class="slide-content">
+        <h1>Sooo, do you want to be my Valentine? hehe</h1>
+        <div class="button-container">
+          <button class="choice-btn yes-btn" id="yesBtn">Yes</button>
+          <button class="choice-btn no-btn" id="noBtn">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YES FLOW (separate container) -->
+  <div class="container yes-flow" id="yesFlow" style="display: none;">
+    <!-- Yes slide 1 -->
+    <div class="slide" data-slide="yes-1">
+      <div class="slide-content">
+        <h1>Well uhhh, i didn't expect na gusto mo lumabas, hehe</h1>
+      </div>
+    </div>
+
+    <!-- Yes slide 2 -->
+    <div class="slide" data-slide="yes-2">
+      <div class="slide-content">
+        <h1>Well, speechless ako rn huhu</h1>
+      </div>
+    </div>
+
+    <!-- Yes slide 3 -->
+    <div class="slide" data-slide="yes-3">
+      <div class="slide-content">
+        <h1>Thanks for saying yes, Airish :3</h1>
+      </div>
+    </div>
+
+    <!-- Yes slide 4 -->
+    <div class="slide" data-slide="yes-4">
+      <div class="slide-content">
+        <h1>San mo gusto pwede? hehe</h1>
+      </div>
+    </div>
+
+    <!-- Yes slide 5 -->
+    <div class="slide" data-slide="yes-5">
+      <div class="slide-content">
+        <h1>Ay, di ka man pala nakaka type dito huhu,<br/>chat mo nalang sakin hehe</h1>
+      </div>
+    </div>
+
+    <!-- Yes slide 6 -->
+    <div class="slide" data-slide="yes-6">
+      <div class="slide-content">
+        <h1>Again, happy Valentines day Airish!!! 💕💕</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- NO FLOW (separate container) -->
+  <div class="container no-flow" id="noFlow" style="display: none;">
+    <!-- No slide 1 -->
+    <div class="slide" data-slide="no-1">
+      <div class="slide-content">
+        <h1>It's okay, baka busy ka ngayon<br/>or something hehe</h1>
+      </div>
+    </div>
+
+    <!-- No slide 2 -->
+    <div class="slide" data-slide="no-2">
+      <div class="slide-content">
+        <h1>Anyways, kahit ayaw mo lumabas tayo,<br/>i wish you the best nalang on this day</h1>
+      </div>
+    </div>
+
+    <!-- No slide 3 -->
+    <div class="slide" data-slide="no-3">
+      <div class="slide-content">
+        <h1>Happy Valentines uli Airish! 💕</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="click-hint">Click to advance</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
